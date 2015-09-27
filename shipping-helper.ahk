@@ -35,7 +35,7 @@ Gui,1:Add,Button,x450 y175 w80 h45 gstop-all,Stop all `nscripts`
 Gui,1:Add,MonthCal,x366 y2 w225 h160,MonthCal
 
 Gui,1:Add,Button,x480 y395 w52 h32 gChangelog, Change Log
-;~ Gui,1:Add,Button,x425 y432 w52 h27 gupdate, Update
+Gui,1:Add,Button,x425 y432 w52 h27 gupdate, Update
 Gui,1:Add,Button,x480 y432 w52 h27 gAbout, About
 Gui,1:Add,Button,x536 y432 w52 h27 gexit1,Exit
 
@@ -533,7 +533,7 @@ MsgBox,,Change Logs, Change Log Version 0.3: `nAdded update feature (Still in te
 return
 
 About:
-MsgBox,,About Shippings Helper, Made By: Brian Doyle `nVersion: 0.3` `nCopyright: 2015-2020` `nThis is to help you with your basic needs in shipping.` `nKeep on the lookout for things that change over the year.` `nAt some point this will be obsolete.`
+MsgBox,,About Shippings Helper, Made By: Brian Doyle `nVersion: 0.5` `nCopyright: 2015-2020` `nThis is to help you with your basic needs in shipping.` `nKeep on the lookout for things that change over the year.` `nAt some point this will be obsolete.`
 return
 
 back1:
@@ -638,7 +638,7 @@ Return
 update:
 ;~ run, www.salithoxreview.com/shipping/Version.ini
 ;~ run, www.salithoxreview.com/shipping/shipping-helper.exe
-;~ Check_ForUpdate(1,0)
+Check_ForUpdate(1,0)
 return
 
 Check_ForUpdate(_ReplaceCurrentScript = 1, _SuppressMsgBox = 0, _CallbackFunction = "",  ByRef _Information = "")
@@ -654,8 +654,8 @@ Check_ForUpdate(_ReplaceCurrentScript = 1, _SuppressMsgBox = 0, _CallbackFunctio
 	
 		
 	Static Script_Name := "shipping-helper" ;Your script name
-	, Version_Number := 0.3 ;The script's version number
-	, Update_URL := "http://www.salithoxreview.com/shipping/Version.ini" ;The URL of the version.ini file for your script
+	, Version_Number := 0.5 ;The script's version number
+	, Update_URL := "https://github.com/Salithox/AHK-scripts/Version.ini" ;The URL of the version.ini file for your script
 	, Retry_Count := 3 ;Retry count for if/when anything goes wrong
 	
 	Random,Filler,10000000,99999999
